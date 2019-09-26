@@ -17,7 +17,7 @@ import * as serviceWorker from './serviceWorker';
 const enhancer = process.env.NODE_ENV === 'development' ?
     composeWithDevTools(applyMiddleware(thunk)) : applyMiddleware(thunk)
 const store = createStore(reducer, enhancer)
-
+console.log(store)
 ReactDOM.render(
     <MuiThemeProvider>
         <Provider store={store}>

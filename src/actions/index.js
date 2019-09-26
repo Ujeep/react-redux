@@ -30,6 +30,6 @@ export const putEvent = values => async dispatch => {
 }
 
 export const deleteEvent = id => async dispatch => {
-    const response = await axios.delete(`${ROOT_URL}/events/${id}${QUERYSTRING}`)
+    await axios.delete(`${ROOT_URL}/events/${id}${QUERYSTRING}`)
     dispatch({ type: DELETE_EVENT, id })
 }

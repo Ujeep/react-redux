@@ -14,6 +14,7 @@ class EventsNew extends Component {
   }
 
   renderField(field) {
+    console.log(field)
     const { input, label, type, meta: { touched, error } } = field
 
     return (
@@ -50,12 +51,11 @@ class EventsNew extends Component {
 
 const validate = values => {
   const errors = {}
-
   if (!values.title) errors.title = "Enter a Title"
   if (!values.body) errors.body = "Enter a Body"
-
   return errors
 }
+
 const mapDispatchToProps = ({ postEvent })
 
 export default connect(null, mapDispatchToProps)(

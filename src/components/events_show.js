@@ -9,7 +9,6 @@ import TextField from 'material-ui/TextField'
 class EventShow extends Component {
 
   constructor(props) {
-    console.log('events')
     super(props)
     this.onSubmit = this.onSubmit.bind(this)
     this.onDeleteClick = this.onDeleteClick.bind(this)
@@ -37,7 +36,6 @@ class EventShow extends Component {
 
 
   async onDeleteClick() {
-    console.log(this.props.match.params)
     const { id } = this.props.match.params
     await this.props.deleteEvent(id)
     this.props.history.push("/")
